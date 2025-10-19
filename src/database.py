@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker 
 
 
-SQLALCHEMY_DATABASE_URI = "postgresql+asyncpg://alex:12345@172.18.0.1.:5432/medical_image_processing"
+SQLALCHEMY_DATABASE_URI = "postgresql+asyncpg://alex:12345@172.18.0.1:5432/medical_image_processing"
 engine = create_async_engine(SQLALCHEMY_DATABASE_URI)
 async_session_maker = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
